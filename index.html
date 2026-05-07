@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan de Preparación WRO 2026 — Tutores</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
+
+  :root {
+    --wro-blue: #1a2e5a;
+    --wro-orange: #f28a1e;
+    --wro-yellow: #ffd01f;
+    --elem-color: #e63946;
+    --junior-color: #2196F3;
+    --both-color: #2d6a4f;
+    --bg: #f5f5f0;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --border: #e2e8f0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* ─── HEADER ─── */
+  .doc-header {
+    background: var(--wro-blue);
+    color: white;
+    padding: 28px 36px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .doc-header::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 200px; height: 200px;
+    background: var(--wro-orange);
+    border-radius: 50%;
+    opacity: 0.15;
+  }
+  .doc-header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: 120px;
+    width: 140px; height: 140px;
+    background: var(--wro-yellow);
+    border-radius: 50%;
+    opacity: 0.10;
+  }
+  .header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .header-title h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    color: var(--wro-yellow);
+  }
+  .header-title h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    margin-top: 4px;
+  }
+  .header-meta {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .meta-pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .header-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+    flex-shrink: 0;
+  }
+  .badge-elem {
+    background: var(--elem-color);
+    color: white;
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .badge-junior {
+    background: var(--junior-color);
+    color: white;
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  /* ─── LEGEND ─── */
+  .legend-bar {
+    background: #eef2f7;
+    border-bottom: 2px solid var(--border);
+    padding: 8px 36px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .legend-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 4px;
+  }
+  .leg-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dot-e { background: var(--elem-color); }
+  .dot-j { background: var(--junior-color); }
+  .dot-b { background: var(--both-color); }
+  .dot-warn { background: var(--wro-orange); }
+
+  /* ─── BODY ─── */
+  .content {
+    padding: 24px 36px;
+    max-width: 1100px;
+  }
+
+  /* ─── PHASE HEADER ─── */
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0 12px;
+  }
+  .phase-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    background: var(--wro-blue);
+    padding: 3px 10px;
+    border-radius: 3px;
+  }
+  .phase-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--wro-blue);
+    letter-spacing: 0.5px;
+  }
+  .phase-line {
+    flex: 1;
+    height: 2px;
+    background: var(--border);
+  }
+
+  /* ─── SESSION CARD ─── */
+  .session {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .session-head {
+    display: grid;
+    grid-template-columns: 110px 1fr auto;
+    align-items: center;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .session-date {
+    background: var(--wro-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+  }
+  .session-date .day {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .session-date .month {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+  .session-date .num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--wro-orange);
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-top: 4px;
+    display: inline-block;
+  }
+  .session-title-block {
+    padding: 10px 16px;
+  }
+  .session-title-block h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--wro-blue);
+    letter-spacing: 0.3px;
+  }
+  .session-title-block .focus {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 500;
+    margin-top: 1px;
+  }
+  .session-tag {
+    padding: 0 16px;
+  }
+  .tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .tag-both { background: #d1fae5; color: #065f46; }
+  .tag-elem { background: #fee2e2; color: #991b1b; }
+  .tag-junior { background: #dbeafe; color: #1e40af; }
+
+  /* ─── SESSION BODY ─── */
+  .session-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .col {
+    padding: 14px 16px;
+    border-right: 1px solid var(--border);
+  }
+  .col:last-child { border-right: none; }
+  .col-header {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid;
+  }
+  .col-common .col-header { color: var(--both-color); border-color: var(--both-color); }
+  .col-elem .col-header { color: var(--elem-color); border-color: var(--elem-color); }
+  .col-junior .col-header { color: var(--junior-color); border-color: var(--junior-color); }
+
+  .session-body.three-col {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  ul.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  ul.task-list li {
+    display: flex;
+    gap: 7px;
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  ul.task-list li::before {
+    content: '▸';
+    font-size: 10px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--muted);
+  }
+  ul.task-list li strong {
+    font-weight: 600;
+  }
+  ul.task-list.e-list li::before { color: var(--elem-color); }
+  ul.task-list.j-list li::before { color: var(--junior-color); }
+  ul.task-list.b-list li::before { color: var(--both-color); }
+
+  /* ─── NOTES BAR ─── */
+  .session-notes {
+    background: #fffbeb;
+    border-top: 1px solid #fde68a;
+    padding: 8px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 11px;
+    color: #78350f;
+  }
+  .session-notes .icon {
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 0px;
+  }
+
+  /* ─── KPI STRIP ─── */
+  .kpi-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 16px 0;
+    padding: 14px;
+    background: var(--wro-blue);
+    border-radius: 8px;
+  }
+  .kpi {
+    text-align: center;
+    color: white;
+  }
+  .kpi .val {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--wro-yellow);
+    line-height: 1;
+  }
+  .kpi .lbl {
+    font-size: 10px;
+    opacity: 0.75;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  /* ─── RULES BOX ─── */
+  .rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 12px 0 16px;
+  }
+  .rules-box {
+    border-radius: 8px;
+    padding: 14px;
+    border: 1px solid;
+  }
+  .rules-box.elem { border-color: #fca5a5; background: #fff5f5; }
+  .rules-box.junior { border-color: #93c5fd; background: #eff6ff; }
+  .rules-box h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .rules-box.elem h4 { color: var(--elem-color); }
+  .rules-box.junior h4 { color: var(--junior-color); }
+  .rules-box table { width: 100%; border-collapse: collapse; }
+  .rules-box td {
+    padding: 3px 0;
+    font-size: 11.5px;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .rules-box td:first-child {
+    font-weight: 600;
+    width: 50%;
+    color: #374151;
+    padding-right: 8px;
+  }
+
+  /* ─── COMPETITION PROTOCOL ─── */
+  .protocol-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .protocol-step {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    position: relative;
+  }
+  .protocol-step .step-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--border);
+    line-height: 1;
+    position: absolute;
+    top: 8px; right: 10px;
+  }
+  .protocol-step h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--wro-blue);
+    margin-bottom: 6px;
+  }
+
+  /* ─── SCORING TABLE ─── */
+  .score-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    font-size: 11.5px;
+  }
+  .score-table th {
+    background: var(--wro-blue);
+    color: white;
+    padding: 6px 10px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .score-table td {
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .score-table tr:nth-child(even) td { background: #f9fafb; }
+
+  /* ─── FOOTER ─── */
+  .doc-footer {
+    background: var(--wro-blue);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+    margin-top: 24px;
+  }
+
+  /* ─── PRINT ─── */
+  @media print {
+    body { background: white; font-size: 11px; }
+    .content { padding: 16px 20px; }
+    .doc-header { padding: 20px; }
+    .session { page-break-inside: avoid; }
+    .phase-header { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="doc-header">
+  <div class="header-top">
+    <div class="header-title">
+      <h1>PLAN DE PREPARACIÓN WRO 2026</h1>
+      <h2>RoboMission · Guía para Tutores — Fundesteam / Rincón Club House</h2>
+      <div class="header-meta">
+        <span class="meta-pill">📅 9 de mayo – 11 de julio de 2026</span>
+        <span class="meta-pill">📆 10 sesiones de sábado</span>
+        <span class="meta-pill">🏆 Robots Meet Culture</span>
+      </div>
+    </div>
+    <div class="header-badges">
+      <span class="badge-elem">🔴 ELEMENTARY · 8–12 años · "Robot Rockstars"</span>
+      <span class="badge-junior">🔵 JUNIOR · 11–15 años · "Heritage Heroes"</span>
+    </div>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend-bar">
+  <span class="legend-label">Referencias</span>
+  <span class="leg-item"><span class="dot dot-b"></span>Ambas categorías</span>
+  <span class="leg-item"><span class="dot dot-e"></span>Solo Elementary</span>
+  <span class="leg-item"><span class="dot dot-j"></span>Solo Junior</span>
+  <span class="leg-item"><span class="dot dot-warn"></span>Nota del tutor</span>
+</div>
+
+<div class="content">
+
+  <!-- KPIs -->
+  <div class="kpi-strip">
+    <div class="kpi"><div class="val">10</div><div class="lbl">Sábados de entrenamiento</div></div>
+    <div class="kpi"><div class="val">2</div><div class="lbl">Categorías simultáneas</div></div>
+    <div class="kpi"><div class="val">2 min</div><div class="lbl">Duración de cada intento</div></div>
+    <div class="kpi"><div class="val">250³</div><div class="lbl">mm máx. del robot (inicio)</div></div>
+  </div>
+
+  <!-- REGLAS RÁPIDAS -->
+  <div class="rules-grid">
+    <div class="rules-box elem">
+      <h4>🔴 Elementary — Robot Rockstars</h4>
+      <table>
+        <tr><td>Tapete</td><td>Escenario musical, teclas de piano, bloques de colores</td></tr>
+        <tr><td>Motores máx.</td><td><strong>4 motores</strong></td></tr>
+        <tr><td>Cámara</td><td>❌ No permitida</td></tr>
+        <tr><td>Sensores clave</td><td>Color, distancia, giroscopio</td></tr>
+        <tr><td>Navegación</td><td>Línea simple, zonas definidas por color</td></tr>
+        <tr><td>Tarea central</td><td>Mover/clasificar bloques de colores a zonas objetivo</td></tr>
+      </table>
+    </div>
+    <div class="rules-box junior">
+      <h4>🔵 Junior — Heritage Heroes</h4>
+      <table>
+        <tr><td>Tapete</td><td>Ciudad patrimonial, arqueología, museo central</td></tr>
+        <tr><td>Motores máx.</td><td><strong>5 motores</strong></td></tr>
+        <tr><td>Cámara</td><td>✅ Permitida (opcional)</td></tr>
+        <tr><td>Sensores clave</td><td>Color, distancia, giroscopio (+ cámara opcional)</td></tr>
+        <tr><td>Navegación</td><td>Línea con <strong>intersecciones y bifurcaciones</strong></td></tr>
+        <tr><td>Tarea central</td><td>Navegar la red de caminos, clasificar artefactos/bloques por zona</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- PHASE 1 -->
+  <div class="phase-header">
+    <span class="phase-number">Fase 1</span>
+    <span class="phase-title">FUNDAMENTOS — Reglas, Tapete y Construcción Base</span>
+    <div class="phase-line"></div>
+    <span style="font-size:11px;color:var(--muted);font-weight:600;white-space:nowrap;">Semanas 1–3 · May 9–23</span>
+  </div>
+
+  <!-- S1 -->
+  <div class="session">
+    <div class="session-head">
+      <div class="session-date">
+        <div class="month">Mayo</div>
+        <div class="day">9</div>
+        <div class="num">Sesión 1</div>
+      </div>
+      <div class="session-title-block">
+        <h3>KICKOFF — Reglas, Tapete y Roles de Equipo</h3>
+        <div class="focus">Comprensión del juego · Análisis del campo · Formación de equipos</div>
+      </div>
+      <div class="session-tag"><span class="tag tag-both">Ambas</span></div>
+    </div>
+    <div class="session-body three-col">
+      <div class="col col-common">
+        <div class="col-header">📋 Común (ambas categorías)</div>
+        <ul class="task-list b-list">
+          <li>Leer y discutir reglas clave: <strong>robot autónomo, 2 min por intento, 250³mm, 1 botón inicio/stop</strong></li>
+          <li>Ver los tapetes físicamente o en PDF — identificar zonas de salida, colores y elementos de juego</li>
+          <li>Definir roles: quién programa, quién construye, quién anota en competencia</li>
+          <li>Establecer cómo registran cambios al código (control de versiones básico: numerar archivos)</li>
+          <li>Revisar lista de materiales disponibles (kit, sensores, herramientas)</li>
+        </ul>
+      </div>
+      <div class="col col-elem">
+        <div class="col-header">🔴 Elementary</div>
+        <ul class="task-list e-list">
+          <li>Identificar en el tapete: bloques de colores a mover, zonas destino, posición de inicio</li>
+          <li>Contar colores únicos en el tapete → planificar qué sensor de color necesitan</li>
+          <li>Tarea: dibujar la ruta óptima que resuelve más puntos primero</li>
+        </ul>
+      </div>
+      <div class="col col-junior">
+        <div class="col-header">🔵 Junior</div>
+        <ul class="task-list j-list">
+          <li>Mapear el tapete: identificar <strong>todas las intersecciones</strong>, zonas de destino, posición de salida</li>
+          <li>Listar tareas visibles: objetos a trasladar, zonas de destino, posibles aleatoriedades</li>
+          <li>Tarea: dibujar el grafo de caminos del tapete con las decisiones en cada nodo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="session-notes">
+      <span class="icon">⚠️</span>
+      <span><strong>Tutor:</strong> Enfatizar que el robot debe ser 100% autónomo. Ningún miembro del equipo puede tocarlo durante el intento. Bluetooth/Wi-Fi debe estar desactivado. Practicar el apagado manual desde el inicio.</span>
+    </div>
+  </div>
+
+  <!-- S2 -->
+  <div class="session">
+    <div class="session-head">
+      <div class="session-date">
+        <div class="month">Mayo</div>
+        <div class="day">16</div>
+        <div class="num">Sesión 2</div>
+      </div>
+      <div class="session-title-block">
+        <h3>MECÁNICA BASE — Chasis, Motores y Restricciones</h3>
+        <div class="focus">Construcción del robot · Proporciones · Verificación de reglas físicas</div>
+      </div>
+      <div class="session-tag"><span class="tag tag-both">Ambas</span></div>
+    </div>
+    <div class="session-body three-col">
+      <div class="col col-common">
+        <div class="col-header">📋 Común</div>
+        <ul class="task-list b-list">
+          <li>Construir chasis base: ruedas motrices + rueda loca o 4 ruedas</li>
+          <li>Medir con regla: el robot debe caber en 250×250×250 mm <strong>incluyendo cables</strong></li>
+          <li>Colocar y verificar el <strong>botón de inicio/parada</strong> visible en el exterior (no debajo)</li>
+          <li>Prueba de movimiento recto: ¿avanza recto 1 metro sin desviarse?</li>
+          <li>Prueba de giro: ¿gira exactamente 90° con consistencia?</li>
+        </ul>
+      </div>
+      <div class="col col-elem">
+        <div class="col-header">🔴 Elementary (máx. 4 motores)</div>
+        <ul class="task-list e-list">
+          <li>Distribución sugerida: <strong>2 motores de tracción + 1 motor para mecanismo de empuje/recogida</strong>, reservar 1 motor para ajuste</li>
+          <li>Diseñar el mecanismo de empuje de bloques: brazo frontal o laterales</li>
+          <li>Verificar que el brazo no excede 250mm antes del inicio</li>
+        </ul>
+      </div>
+      <div class="col col-junior">
+        <div class="col-header">🔵 Junior (máx. 5 motores)</div>
+        <ul class="task-list j-list">
+          <li>Distribución sugerida: <strong>2 motores tracción + 1 mecanismo agarrar/empujar + 1 brazo + 1 auxiliar</strong></li>
+          <li>Diseñar mecanismo de agarre o colector para objetos más precisos</li>
+          <li>Considerar dónde va la cámara si deciden usarla (sin afectar tamaño inicial)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="session-notes">
+      <span class="icon">⚠️</span>
+      <span><strong>Tutor:</strong> Enseñar a medir el robot correctamente con una cinta métrica. El cubo verificador de 250mm lo usarán los jueces — el equipo debe poder demostrarlo. Recordar: peso máximo 1.5 kg, batería máx. 6000 mAh, voltaje máx. 14V.</span>
+    </div>
+  </div>
+
+  <!-- S3 -->
+  <div class="session">
+    <div class="session-head">
+      <div class="session-date">
+        <div class="month">Mayo</div>
+        <div class="day">23</div>
+        <div class="num">Sesión 3</div>
+      </div>
+      <div class="session-title-block">
+        <h3>SENSORES — Calibración y Lectura Confiable</h3>
+        <div class="focus">Sensor de color · Distancia · Giroscopio · Variabilidad del entorno</div>
+      </div>
+      <div class="session-tag"><span class="tag tag-both">Ambas</span></div>
+    </div>
+    <div class="session-body three-col">
+      <div class="col col-common">
+        <div class="col-header">📋 Común</div>
+        <ul class="task-list b-list">
+          <li><strong>Sensor de color:</strong> calibrar con cada color del tapete real bajo distintas condiciones de luz</li>
+          <li>Registrar valores de lectura para cada color → crear tabla de referencia</li>
+          <li><strong>Giroscopio:</strong> verificar deriva acumulativa — ¿cuánto se desvía en 5 giros?</li>
+          <li><strong>Sensor de distancia:</strong> probar detección de objetos de juego a diferentes distancias</li>
+          <li>Ejercicio: el robot detecta un bloque, se detiene, reporta el color correctamente 10/10 veces</li>
+        </ul>
+      </div>
+      <div class="col col-elem">
+        <div class="col-header">🔴 Elementary</div>
+        <ul class="task-list e-list">
+          <li>Calibrar sensor de color contra los bloques específicos del tapete Elementary (músicales: rojo, verde, azul, negro, amarillo, blanco)</li>
+          <li>Establecer umbrales seguros — un bloque no debe confundirse con el piso</li>
+          <li>Práctica: detectar y clasificar 5 bloques consecutivos correctamente</li>
+        </ul>
+      </div>
+      <div class="col col-junior">
+        <div class="col-header">🔵 Junior</div>
+        <ul class="task-list j-list">
+          <li>Calibrar sensor de color para la <strong>línea negra del tapete Heritage Heroes</strong> (seguimiento de línea)</li>
+          <li>Identificar los colores de los marcadores en intersecciones para toma de decisiones</li>
+          <li>Si usan cámara: validar que detecta colores de bloques con luz de salón variable</li>
+        </ul>
+      </div>
+    </div>
+    <div class="session-notes">
+      <span class="icon">⚠️</span>
+      <span><strong>Tutor:</strong> El tapete puede tener variación de brillo entre mesas y por hora del día (regla 7.10.2–7.10.3). Enseñar a los chicos a calibrar SIEMPRE en el primer tiempo de práctica del día de competencia, no solo en casa.</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- PHASE 2 -->
+  <div class="phase-header">
+    <span class="phase-number">Fase 2</span>
+    <span class="phase-title">PROGRAMACIÓN — Navegación, Lógica y Manipulación</span>
+    <div class="phase-line"></div>
+    <span style="font-size:11px;color:var(--muted);font-weight:600;white-space:nowrap;">Semanas 4–6 · May 30 – Jun 13</span>
+  </div>
+
+  <!-- S4 -->
+  <div class="session">
+    <div class="session-head">
+      <div class="session-date">
+        <div class="month">Mayo</div>
+        <div class="day">30</div>
+        <div class="num">Sesión 4</div>
+      </div>
+      <div class="session-title-block">
+        <h3>NAVEGACIÓN — Movimiento Preciso y Orientación</h3>
+        <div class="focus">Avance calibrado · Giros exactos · Corrección con giroscopio</div>
+      </div>
+      <div class="session-tag"><span class="tag tag-both">Ambas</span></div>
+    </div>
+    <div class="session-body three-col">
+      <div class="col col-common">
+        <div class="col-header">📋 Común</div>
+        <ul class="task-list b-list">
+          <li>Programar movimiento por <strong>rotaciones de rueda</strong> (no tiempo) — más consistente</li>
+          <li>Función: <code>avanzar(cm)</code> → convierte centímetros a rotaciones de rueda</li>
+          <li>Función: <code>girar(grados)</code> → giro sobre su eje usando giroscopio como referencia</li>
+          <li>Prueba de repetibilidad: ejecutar la misma ruta 5 veces, medir desviación acumulada</li>
+          <li>Si hay deriva: implementar corrección PID simple o por pulsos del encoder</li>
+        </ul>
+      </div>
+      <div class="col col-elem">
+        <div class="col-header">🔴 Elementary</div>
+        <ul class="task-list e-list">
+          <li>Programar ruta de la zona de salida a la primera zona de misión</li>
+          <li>Prueba: completar el recorrido más corto del tapete sin tocar bordes</li>
+          <li>Dividir el programa en <strong>bloques de misión numerados</strong> para fácil depuración</li>
+        </ul>
+      </div>
+      <div class="col col-junior">
+        <div class="col-header">🔵 Junior</div>
+        <ul class="task-list j-list">
+          <li>Programar seguimiento de línea: <strong>control PD</strong> con sensor de color (proporcional + derivativo)</li>
+          <li>Función: <code>seguir_linea_hasta(color_marcador)</code> que para en el marcador correcto</li>
+          <li>Prueba: seguir línea desde salida hasta primera intersección sin salirse</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- S5 -->
+  <div class="session">
+    <div class="session-head">
+      <div class="session-date">
+        <div class="month">Junio</div>
+        <div class="day">6</div>
+        <div class="num">Sesión 5</div>
+      </div>
+      <div class="session-title-block">
+        <h3>DECISIONES Y RUTAS — Lógica de Misión</h3>
+        <div class="focus">Secuencia de tareas · Intersecciones (Junior) · Clasificación por color</div>
+      </div>
+      <div class="session-tag"><span class="tag tag-both">Ambas</span></div>
+    </div>
+    <div class="session-body three-col">
+      <div class="col col-common">
+        <div class="col-header">📋 Común</div>
+        <ul class="task-list b-list">
+          <li>Estructurar el programa principal como <strong>secuencia de misiones</strong>: M1 → M2 → M3 → regreso</li>
+          <li>Cada misión es una función independiente: fácil de probar y reemplazar</li>
+          <li>Programar detección de color de objeto → condicional → acción correspondiente</li>
+          <li>Añadir manejo de fallo: si el sensor lee "desconocido", continuar o retroceder</li>
+        </ul>
+      </div>
+      <div class="col col-elem">
+        <div class="col-header">🔴 Elementary</div>
+        <ul class="task-list e-list">
+          <li>Programar empuje de bloques a zona objetivo según color leído</li>
+          <li>Optimizar: ¿qué orden de misiones da más puntos en menos tiempo?</li>
+          <li>Prueba completa: ejecutar la secuencia de 3 tareas seguidas en el tapete</li>
+        </ul>
+      </div>
+      <div class="col col-junior">
+        <div class="col-header">🔵 Junior</div>
+        <ul class="task-list j-list">
+          <li>Programar <strong>toma de decisión en intersecciones</strong>: leer color de marcador → girar izquierda/derecha/seguir</li>
+          <li>Crear mapa del tapete en código: array de decisiones por nodo</li>
+          <li>Prueba: navegar desde salida hasta 3 destinos distintos del tapete usando el mapa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="session-notes">
+      <span class="icon">⚠️</span>
+      <span><strong>Tutor:</strong> Enseñar depuración sistemática: aislar cada función y probarla sola antes de integrar. Un bug en M2 no debe romper M1. El código modular es clave para el día de competencia cuando hay poco tiempo.</span>
+    </div>
+  </div>
+
+  <!-- S6 -->
+  <div class="session">
+    <div class="session-head">
+      <div class="session-date">
+        <div class="month">Junio</div>
+        <div class="day">13</div>
+        <div class="num">Sesión 6</div>
+      </div>
+      <div class="session-title-block">
+        <h3>MANIPULACIÓN — Recoger, Transportar y Depositar Objetos</h3>
+        <div class="focus">Mecanismo de agarre/empuje · Precisión de depósito · Pruebas de carga</div>
+      </div>
+      <div class="session-tag"><span class="tag tag-both">Ambas</span></div>
+    </div>
+    <div class="session-body three-col">
+      <div class="col col-common">
+        <div class="col-header">📋 Común</div>
+        <ul class="task-list b-list">
+          <li>Programar secuencia: <em>detectar → acercarse → activar mecanismo → retirar</em></li>
+          <li>Calibrar la distancia de activación del mecanismo (consistente ± 5 mm)</li>
+          <li>Prueba de estrés: depositar el mismo bloque en la misma zona 10 veces — ¿cuántas son exitosas?</li>
+          <li>Si el mecanismo falla más de 3 veces → ajustar mecánica antes de seguir programando</li>
+        </ul>
+      </div>
+      <div class="col col-elem">
+        <div class="col-header">🔴 Elementary</div>
+        <ul class="task-list e-list">
+          <li>Afinar el brazo de empuje: debe mover el bloque sin volcarlo ni pasarse de zona</li>
+          <li>Medir: ¿cuántos cm debe avanzar para dejar el bloque "completamente" dentro del área? (puntaje completo vs parcial)</li>
+          <li>Evitar dañar la alfombra o los bloques (penalización en puntuación)</li>
+        </ul>
+      </div>
+      <div class="col col-junior">
+        <div class="col-header">🔵 Junior</div>
+        <ul class="task-list j-list">
+          <li>Afinar mecanismo de agarre: el objeto no debe caerse al seguir la línea</li>
+          <li>Programar: recoger objeto en zona A → navegar por línea → depositar en zona B</li>
+          <li>Prueba completa: ciclo completo de recogida y depósito en el tapete real</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- PHASE 3 -->
+  <div class="phase-header">
+    <span class="phase-number">Fase 3</span>
+    <span class="phase-title">MISIÓN COMPLETA — Integración, Estrategia y Depuración</span>
+    <div class="phase-line"></div>
+    <span style="font-size:11px;color:var(--muted);font-weight:600;white-space:nowrap;">Semanas 7–8 · Jun 20–27</span>
+  </div>
+
+  <!-- S7 -->
+  <div class="session">
+    <div class="session-head">
+      <div class="session-date">
+        <div class="month">Junio</div>
+        <div class="day">20</div>
+        <div class="num">Sesión 7</div>
+      </div>
+      <div class="session-title-block">
+        <h3>ESTRATEGIA — Máximos Puntos en 2 Minutos</h3>
+        <div class="focus">Priorización de tareas · Cronometrado · Depuración sistemática</div>
+      </div>
+      <div class="session-tag"><span class="tag tag-both">Ambas</span></div>
+    </div>
+    <div class="session-body three-col">
+      <div class="col col-common">
+        <div class="col-header">📋 Estrategia (clave para ganar)</div>
+        <ul class="task-list b-list">
+          <li><strong>Cronometrar cada misión individualmente</strong> — saber cuántos segundos tarda cada tarea</li>
+          <li>Calcular puntos/segundo por misión → ejecutar primero las de mayor ratio</li>
+          <li>Decidir si vale la pena intentar una misión de riesgo al final</li>
+          <li>Regla de oro: <em>puntos seguros primero, luego puntos difíciles</em></li>
+          <li>Hacer 3 intentos cronometrados completos — anotar puntos y tiempo de cada uno</li>
+        </ul>
+      </div>
+      <div class="col col-elem">
+        <div class="col-header">🔴 Elementary</div>
+        <ul class="task-list e-list">
+          <li>Identificar cuál misión da más puntos con menos movimiento</li>
+          <li>¿Conviene repetir una misión fácil dos veces si el tiempo lo permite?</li>
+          <li>Definir punto de "parada segura": si algo falla, el robot debe poder terminar limpiamente</li>
+        </ul>
+      </div>
+      <div class="col col-junior">
+        <div class="col-header">🔵 Junior</div>
+        <ul class="task-list j-list">
+          <li>Evaluar: ¿conviene una ruta más larga que pase por más zonas de puntos?</li>
+          <li>Plan B: si falla la navegación en la intersección X, ¿qué hace el robot?</li>
+          <li>Considerar aleatoriedad del tapete: ¿el programa puede adaptarse o es completamente fijo?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="session-notes">
+      <span class="icon">⚠️</span>
+      <span><strong>Tutor:</strong> Enseñar a los chicos a anotar los resultados de cada intento en papel (puntos + tiempo). Esto les permite detectar si una modificación empeoró el resultado. Sin datos no hay mejora consistente.</span>
+    </div>
+  </div>
+
+  <!-- S8 -->
+  <div class="session">
+    <div class="session-head">
+      <div class="session-date">
+        <div class="month">Junio</div>
+        <div class="day">27</div>
+        <div class="num">Sesión 8</div>
+      </div>
+      <div class="session-title-block">
+        <h3>INTEGRACIÓN Y ROBUSTEZ — El Robot que No Falla</h3>
+        <div class="focus">Carreras completas · Piezas de repuesto · Resumen técnico</div>
+      </div>
+      <div class="session-tag"><span class="tag tag-both">Ambas</span></div>
+    </div>
+    <div class="session-body three-col">
+      <div class="col col-common">
+        <div class="col-header">📋 Común</div>
+        <ul class="task-list b-list">
+          <li>Ejecutar <strong>5 intentos completos de 2 minutos</strong> sin modificar nada entre intentos</li>
+          <li>Meta: al menos 4 de 5 intentos deben lograr la misma puntuación mínima</li>
+          <li>Identificar el punto de fallo más común → atacarlo esta semana</li>
+          <li>Preparar piezas de repuesto: sensores, motores, cables — verificar que todo funciona</li>
+          <li>Comenzar a llenar el <strong>Resumen Técnico</strong> (obligatorio, máx. 2 páginas A4)</li>
+        </ul>
+      </div>
+      <div class="col col-elem">
+        <div class="col-header">🔴 Elementary</div>
+        <ul class="task-list e-list">
+          <li>Verificar que el mecanismo de empuje no desplaza bloques "por accidente" al pasar</li>
+          <li>Probar el robot con distintas posiciones iniciales — pequeñas variaciones de posición no deben romper la misión</li>
+        </ul>
+      </div>
+      <div class="col col-junior">
+        <div class="col-header">🔵 Junior</div>
+        <ul class="task-list j-list">
+          <li>Probar seguimiento de línea con sombra proyectada (simula la sombra del juez — regla 7.10.4)</li>
+          <li>Verificar que el robot reacciona correctamente si la lectura de color en intersección es ambigua</li>
+        </ul>
+      </div>
+    </div>
+    <div class="session-notes">
+      <span class="icon">⚠️</span>
+      <span><strong>Tutor:</strong> Recordar: el resumen técnico incluye foto del robot con el botón de inicio/parada marcado, lista de sensores y motores, y entorno de programación. En la final internacional es obligatorio — entregar digital 1 semana antes o descuentan 10% de puntos por ronda.</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- PHASE 4 -->
+  <div class="phase-header">
+    <span class="phase-number">Fase 4</span>
+    <span class="phase-title">COMPETENCIA — Simulación, Protocolo y Ajuste Final</span>
+    <div class="phase-line"></div>
+    <span style="font-size:11px;color:var(--muted);font-weight:600;white-space:nowrap;">Semanas 9–10 · Jul 4–11</span>
+  </div>
+
+  <!-- S9 -->
+  <div class="session">
+    <div class="session-head">
+      <div class="session-date">
+        <div class="month">Julio</div>
+        <div class="day">4</div>
+        <div class="num">Sesión 9</div>
+      </div>
+      <div class="session-title-block">
+        <h3>SIMULACRO DE TORNEO — Competencia Real en el Salón</h3>
+        <div class="focus">Cuarentena · Tiempo oficial · Hoja de puntuación · Protocolo completo</div>
+      </div>
+      <div class="session-tag"><span class="tag tag-both">Ambas</span></div>
+    </div>
+    <div class="session-body">
+      <div class="col col-common">
+        <div class="col-header">📋 Protocolo del simulacro (seguir al pie de la letra)</div>
+        <ul class="task-list b-list">
+          <li><strong>Tiempo de práctica (30 min):</strong> calibrar, hacer intentos de prueba — el tutor cronometra</li>
+          <li><strong>Cuarentena:</strong> el robot debe estar listo (1 solo botón), Wi-Fi/BT apagado, sin modificaciones</li>
+          <li><strong>Verificación (juez = tutor):</strong> medir robot, comprobar botón, verificar BT desactivado</li>
+          <li><strong>Ronda oficial (2 min):</strong> solo el equipo está en el tapete, nadie toca el robot ni los objetos</li>
+          <li>Anotar en hoja de puntuación → el equipo "firma" los puntos obtenidos</li>
+          <li>Repetir 3 rondas completas con tiempo de práctica entre rondas</li>
+        </ul>
+      </div>
+      <div class="col col-common">
+        <div class="col-header">📋 Situaciones de competencia a practicar</div>
+        <ul class="task-list b-list">
+          <li><strong>El robot se sale de la mesa:</strong> el intento termina — practicar declarar STOP</li>
+          <li><strong>Una pieza cae en el campo:</strong> si es un sensor/motor → el intento vale 0 puntos y 120 segundos</li>
+          <li><strong>El robot se traba:</strong> el equipo puede decir STOP — el juez puntúa el estado actual</li>
+          <li><strong>Puntuación en disputa:</strong> practicar aceptar la decisión del juez con compostura</li>
+          <li><strong>Tiempo de 3 minutos para corregir infracción:</strong> practicar esta situación</li>
+        </ul>
+      </div>
+    </div>
+    <div class="session-notes">
+      <span class="icon">⚠️</span>
+      <span><strong>Tutor:</strong> Actúa como juez estricto durante el simulacro. Si alguien toca el robot fuera de la zona de salida → fin del intento. Si el entrenador intenta ayudar durante la ronda → penalización. El objetivo es que los chicos se sientan seguros con el protocolo real.</span>
+    </div>
+  </div>
+
+  <!-- S10 -->
+  <div class="session">
+    <div class="session-head">
+      <div class="session-date">
+        <div class="month">Julio</div>
+        <div class="day">11</div>
+        <div class="num">Sesión 10</div>
+      </div>
+      <div class="session-title-block">
+        <h3>SESIÓN FINAL — Ajuste, Documentación y Mentalidad</h3>
+        <div class="focus">Últimos ajustes · Resumen técnico listo · Checklist de competencia</div>
+      </div>
+      <div class="session-tag"><span class="tag tag-both">Ambas</span></div>
+    </div>
+    <div class="session-body">
+      <div class="col col-common">
+        <div class="col-header">📋 Ajustes finales (REGLA: solo pulir, no rediseñar)</div>
+        <ul class="task-list b-list">
+          <li>Solo corregir fallos conocidos — <strong>no implementar nuevas funciones esta semana</strong></li>
+          <li>Ejecutar 5 intentos finales y registrar puntuación → calcular promedio y peor caso</li>
+          <li>Verificar que el resumen técnico está completo con foto del robot actual</li>
+          <li>Preparar bolsa de competencia: robot, laptop, repuestos, cinta métrica, documentación</li>
+          <li>Asegurarse de que el código está guardado en al menos 2 lugares (USB + laptop)</li>
+        </ul>
+      </div>
+      <div class="col col-common">
+        <div class="col-header">📋 Mentalidad y protocolo el día de competencia</div>
+        <ul class="task-list b-list">
+          <li>Llegar temprano — el primer tiempo de práctica es <strong>obligatorio para calibrar</strong></li>
+          <li>Calibrar el sensor de color en el tapete real del venue antes de la primera ronda oficial</li>
+          <li>Si hay un fallo durante práctica: depurar, no entrar en pánico. Aislar el problema.</li>
+          <li>Durante cuarentena: el robot debe estar listo. Solo se presiona el botón de inicio UNA VEZ</li>
+          <li>El código final debe estar ya en el robot — <strong>no se transfiere código nuevo después de cuarentena</strong></li>
+          <li>Si un juez pide explicar el robot: cualquier miembro del equipo debe poder hacerlo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="session-notes">
+      <span class="icon">⚠️</span>
+      <span><strong>Tutor:</strong> Recordar a los equipos firmar el Código Ético de WRO. Los jueces pueden investigar si sospechan de código copiado — los estudiantes deben poder explicar su programa completo, incluyendo subprogramas y funciones reutilizables.</span>
+    </div>
+  </div>
+
+  <!-- TABLA PROTOCOLO COMPETENCIA -->
+  <div class="phase-header" style="margin-top:28px;">
+    <span class="phase-number">Ref.</span>
+    <span class="phase-title">PROTOCOLO DEL DÍA DE COMPETENCIA (para imprimir y llevar)</span>
+    <div class="phase-line"></div>
+  </div>
+
+  <div class="protocol-grid">
+    <div class="protocol-step">
+      <div class="step-num">1</div>
+      <h5>⏰ LLEGADA</h5>
+      <ul class="task-list b-list">
+        <li>Registrarse con el organizador</li>
+        <li>Llevar resumen técnico impreso</li>
+        <li>Firmar Código Ético</li>
+        <li>Identificar mesa asignada</li>
+      </ul>
+    </div>
+    <div class="protocol-step">
+      <div class="step-num">2</div>
+      <h5>🔧 TIEMPO DE PRÁCTICA</h5>
+      <ul class="task-list b-list">
+        <li>Calibrar sensor de color en el tapete real</li>
+        <li>Hacer al menos 2 intentos completos</li>
+        <li>Anotar puntos obtenidos</li>
+        <li>Ajustar parámetros si es necesario</li>
+      </ul>
+    </div>
+    <div class="protocol-step">
+      <div class="step-num">3</div>
+      <h5>🔒 CUARENTENA</h5>
+      <ul class="task-list b-list">
+        <li>Robot completamente listo</li>
+        <li>BT/Wi-Fi desactivado</li>
+        <li>Programa cargado, 1 solo click para iniciar</li>
+        <li>Entregar a tiempo (si no → no compite esa ronda)</li>
+      </ul>
+    </div>
+    <div class="protocol-step">
+      <div class="step-num">4</div>
+      <h5>🔍 VERIFICACIÓN</h5>
+      <ul class="task-list b-list">
+        <li>Juez mide el robot (máx. 250³mm)</li>
+        <li>Juez verifica botón de inicio/stop visible</li>
+        <li>Si hay infracción: 3 min para corregir</li>
+        <li>Permanecer en calma, no discutir</li>
+      </ul>
+    </div>
+    <div class="protocol-step">
+      <div class="step-num">5</div>
+      <h5>🏁 INTENTO OFICIAL</h5>
+      <ul class="task-list b-list">
+        <li>Colocar robot en zona de salida</li>
+        <li>Juez da señal → presionar botón UNA VEZ</li>
+        <li>Nadie toca el robot ni los objetos del campo</li>
+        <li>Al terminar 2 min o decir STOP: detener</li>
+      </ul>
+    </div>
+    <div class="protocol-step">
+      <div class="step-num">6</div>
+      <h5>📝 PUNTUACIÓN</h5>
+      <ul class="task-list b-list">
+        <li>Juez puntúa el estado del campo</li>
+        <li>Revisar hoja de puntuación calmadamente</li>
+        <li>Si todo es correcto: firmar la hoja</li>
+        <li>Una vez firmado: no hay más reclamos</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TABLA DE CERTIFICADOS -->
+  <div style="margin-top:20px;">
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th>% del máximo de puntos (mejor intento)</th>
+          <th>Certificado</th>
+          <th>Implicación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Menos del 50%</td><td>🥉 Bronce</td><td>Participaron y completaron al menos un intento</td></tr>
+        <tr><td>50% – 75%</td><td>🥈 Plata</td><td>Desempeño sólido — varias misiones completadas</td></tr>
+        <tr><td>Más del 75%</td><td>🥇 Oro</td><td>Objetivo de los equipos Fundesteam</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<div class="doc-footer">
+  Fundesteam / Rincón Club House · WRO RoboMission 2026 · Plan elaborado para uso interno de tutores · Temporada "Robots Meet Culture"
+</div>
+
+</body>
+</html>
